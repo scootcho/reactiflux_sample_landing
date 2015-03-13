@@ -59,8 +59,36 @@ button {
 	}
 }
 
+
+/* .content */
+
 .content {
-	height: 500px;
 	bottom: 0;
+	padding-top: 50px;
 	background: white;
+}
+
+#popular-channels {
+	line-height: 30px;
+	span {
+		font-size: 30px;
+
+		vertical-align: middle;
+	}
+}
+
+#slack-logo {
+	display: inline-block;
+	img {
+	width: 40px;
+	height: auto;
+	}
+}
+
+#area_chart{
+	margin: 0 auto;
+}
+
+#screen-shot{
+	margin-top: 20px;
 }

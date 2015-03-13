@@ -18,4 +18,74 @@
 </div>
 
 <div class="content">
+  <div id="popular-channels">
+    <div id="slack-logo"><%= image_tag('slack.png')%></div>
+    <span>popular channels</span>
+  </div>
+  <div id="area_chart" style="height: 400px; width: 1000px"></div>
+
+  <div id="screen-shot"><%= image_tag('screen-shot.png')%><div>
 </div>
+
+<script type="text/javascript" charset="utf-8">
+$(function () {
+    $('#area_chart').highcharts({
+        chart: {
+            type: 'area'
+        },
+        title: {
+            text: null,
+        },
+        xAxis: {
+            categories: ['May', 'Jun', 'Jul', 'Aug'],
+            tickmarkPlacement: 'on',
+            title: {
+                enabled: false
+            }
+        },
+        yAxis: {
+            title: {
+                enabled: false
+            },
+            labels: {
+                enabled: false
+            },
+            gridLineWidth: 0
+        },
+        legend: {
+            align: 'center',
+            verticalAlign: 'top',
+            y: 50,
+            floating: true
+        },       
+        tooltip: {
+            shared: true,
+            valueSuffix: ' members'
+        },
+        plotOptions: {
+            area: {
+              stacking: 'normal',
+              lineWidth: 1,
+            }
+        },
+        series: [{
+            name: '#general',
+            data: [947, 1402, 3634, 6385],
+            color: '#6ACADB'
+        }, {
+            name: '#random',
+            data: [133, 221, 767, 5851],
+            color: '#E02563'
+        }, {
+            name: '#needhelp',
+            data: [408, 547, 729, 5729],
+            color: '#3FB990'
+        }, {
+            name: '#redux',
+            data: [156, 339, 818, 1537],
+            color: '#E8A820'
+        }]
+    });
+});
+
+</script>
