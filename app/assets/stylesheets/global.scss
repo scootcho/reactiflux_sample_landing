@@ -5,3 +5,13 @@ $slack-pink: #E02563;
 $slack-green: #3FB990;
 $slack-yellow: #E8A820;
 $react-blue: #5FD6FB;
+$space-purple: #553477;
+
+/* mixins */
+
+@mixin border-radius($radius) {
+	border-radius: $radius;
+	-webkit-border-radius: $radius;
+	-ms-border-radius: $radius;
+	-moz-border-radius: $radius;
+}
